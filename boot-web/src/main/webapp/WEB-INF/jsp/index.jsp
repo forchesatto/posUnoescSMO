@@ -8,16 +8,11 @@
 <body>
 	Funcionou ${valor} teste
 	
-	Nome: ${novoNome}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	<form action="/enviar" method="post">
+		<input type="text" name="nome" value="${nome}"/>
+		<input type="text" name="sobrenome" value="${sobrenome}"/>
+		<input type="submit" value="enviar"/>
+	</form>
 	
 </body>
 </html>
