@@ -16,4 +16,8 @@ public interface PessoaRegra {
 	
 	List<Pessoa> listarPorCPF(String cpf);
 	
+	Pessoa buscarPorCodigo(Long codigo);
+	
+	List<Pessoa> dadosGrid();
+	
 }

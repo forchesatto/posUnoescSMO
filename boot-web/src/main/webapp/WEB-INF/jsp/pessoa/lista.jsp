@@ -18,14 +18,17 @@
 				<th>Código</th>
 				<th>Nome</th>
 				<th>CPF</th>
+				<th>Naturalidade</th>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach items="${pessoas}" var="pessoa">
 				<tr>
-					<td>${pessoa.codigo}</td>
+					<td><a href="/pessoa/visualizar/${pessoa.codigo}">${pessoa.codigo}</a></td> 
+											
 					<td>${pessoa.nome}</td>
 					<td>${pessoa.cpf}</td>
+					<td>${pessoa.naturalidade.nome}</td>
 				</tr>
 			</c:forEach>
 		</tbody>	

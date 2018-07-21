@@ -36,5 +36,15 @@ public class PessoaPadrao implements PessoaRegra{
 	public List<Pessoa> listarPorNome(String nome) {
 		return pessoaRepository.findByNomeLike("%"+nome+"%");
 	}
+
+	@Override
+	public Pessoa buscarPorCodigo(Long codigo) {
+		return pessoaRepository.findById(codigo).orElse(new Pessoa());
+	}
+	
+	@Override
+	public List<Pessoa> dadosGrid(){
+		return pessoaRepository.dadosGrid();
+	}
 	
 }
